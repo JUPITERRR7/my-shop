@@ -196,6 +196,7 @@ function renderCart() {
 
   const totals = cartTotals();
   cartCountEl.textContent = toFa(totals.qty);
+  $("bottom-count").textContent = toFa(totals.qty);
   cartTotalEl.textContent = formatPrice(totals.price);
 
   if (cart.length === 0) {
@@ -506,6 +507,11 @@ let marqueeTimer;
 window.addEventListener("resize", function () {
   clearTimeout(marqueeTimer);
   marqueeTimer = setTimeout(buildMarquee, 200);
+});
+
+// ===== دکمه‌ی سبد در نوار پایین =====
+$("bottom-cart").addEventListener("click", function () {
+  openPanel(drawer);
 });
 
 // ===== شروع =====
