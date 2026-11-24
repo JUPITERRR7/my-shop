@@ -514,6 +514,14 @@ $("bottom-cart").addEventListener("click", function () {
   openPanel(drawer);
 });
 
+// ===== دکمه‌ی جستجو در هدر موبایل =====
+$("header-search").addEventListener("click", function () {
+  $("products").scrollIntoView({ behavior: "smooth" });
+  setTimeout(function () {
+    $("search").focus({ preventScroll: true });
+  }, 500);
+});
+
 // ===== شروع =====
 renderProducts();
 renderCart();

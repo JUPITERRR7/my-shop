@@ -727,17 +727,52 @@ nav a:hover::after { width: 100%; }
 /* حس لمس دکمه‌ها */
 .product-card:active { transform: scale(0.97); }
 .btn:active, .checkout-btn:active, .btn-ghost:active { transform: scale(0.97); }
+.header-search { display: none; }
 
 /* ===== موبایل ===== */
 @media (max-width: 720px) {
-  body { padding-bottom: 92px; }
+  .footer { padding-bottom: 110px; }
   nav { display: none; }
 
-  /* هدر: فقط لوگو، سبد میره پایین */
-  .header { padding: 12px 18px; justify-content: center; }
+    /* هدر موبایل: لوگو + دکمه‌ی جستجو */
+  .header {
+    padding: 12px 18px;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.92);
+  }
+  .header::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -1px;
+    height: 3px;
+    background: linear-gradient(90deg, #e63946, #ffb703, #ff8a5c, #e63946);
+    background-size: 200% auto;
+    animation: shine 5s linear infinite;
+    transition: opacity 0.3s ease;
+  }
   .header.scrolled { top: 10px; left: 12px; right: 12px; }
+  .header.scrolled::after { opacity: 0; }
+
   .header .cart { display: none; }
-  .logo { font-size: 1.35rem; }
+  .logo { font-size: 1.6rem; letter-spacing: -0.5px; }
+
+  .header-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #e63946, #ff8a5c);
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(230, 57, 70, 0.35);
+    transition: transform 0.2s ease;
+  }
+  .header-search:active { transform: scale(0.9); }
 
   /* بنر */
   .hero { padding: 100px 20px 0; }
