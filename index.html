@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>استایل‌شاپ | فروشگاه پوشاک</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- هدر -->
+  <header class="header">
+    <h1 class="logo"><span>✦</span> استایل‌شاپ</h1>
+    <nav>
+      <a href="#home">خانه</a>
+      <a href="#products">محصولات</a>
+      <a href="#reviews">نظرات</a>
+      <a href="#contact">تماس با ما</a>
+    </nav>
+    <div class="cart" id="cart-btn" role="button" tabindex="0">
+      <span class="cart-icon">🛒</span>
+      <span class="cart-label">سبد خرید</span>
+      <span class="cart-badge" id="cart-count">۰</span>
+    </div>
+  </header>
+
+  <!-- بنر -->
+  <section class="hero" id="home">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h2>لباسی که شبیه خودته</h2>
+        <p>کالکشن جدید رسیده؛ از تی‌شرت‌های روزمره تا لباس‌های مجلسی، با تخفیف ویژه‌ی این فصل.</p>
+        <div class="hero-actions">
+          <a href="#products" class="btn">مشاهده محصولات</a>
+          <a href="#reviews" class="btn-ghost">نظر مشتری‌ها</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="float-card fc1" data-depth="30"><span>👗</span></div>
+        <div class="float-card fc2" data-depth="45"><span>👟</span></div>
+        <div class="float-card fc3" data-depth="22"><span>🧥</span></div>
+        <div class="float-card fc4" data-depth="38"><span>👜</span></div>
+        <div class="discount-badge" data-depth="55">
+          <strong>۳۰٪</strong>
+          <small>تخفیف</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- نوار متحرک -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track" id="marquee-track">
+      <div class="marquee-group">
+        <span>تا ۳۰٪ تخفیف</span><span>✦</span>
+        <span>ارسال سریع</span><span>✦</span>
+        <span>بازگشت ۷ روزه</span><span>✦</span>
+        <span>کالکشن جدید</span><span>✦</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- محصولات -->
+  <section class="products" id="products">
+    <h2>محصولات</h2>
+
+    <div class="toolbar">
+      <input type="search" id="search" class="search" placeholder="🔍 جستجوی محصول...">
+      <div class="filters" id="filters">
+        <button class="filter active" data-cat="all">همه</button>
+        <button class="filter" data-cat="men">مردانه</button>
+        <button class="filter" data-cat="women">زنانه</button>
+        <button class="filter" data-cat="acc">کفش و اکسسوری</button>
+      </div>
+    </div>
+
+    <div class="product-list" id="product-list"></div>
+    <p class="no-results" id="no-results" hidden>محصولی با این مشخصات پیدا نشد. عبارت دیگری را جستجو کنید یا فیلتر را روی «همه» بگذارید.</p>
+  </section>
+
+  <!-- چرا از ما بخرید -->
+  <section class="features">
+    <div class="feature"><span>🚚</span><h3>ارسال سریع</h3><p>تحویل تا ۴۸ ساعت در تهران</p></div>
+    <div class="feature"><span>↩️</span><h3>بازگشت ۷ روزه</h3><p>اگر اندازه نبود، تعویض می‌کنیم</p></div>
+    <div class="feature"><span>🧵</span><h3>کیفیت تضمینی</h3><p>پارچه و دوخت درجه یک</p></div>
+    <div class="feature"><span>💬</span><h3>پشتیبانی واقعی</h3><p>پاسخ‌گویی هر روز تا ساعت ۲۲</p></div>
+  </section>
+
+  <!-- نظرات -->
+  <section class="reviews" id="reviews">
+    <h2>مشتری‌ها چه می‌گویند</h2>
+    <div class="review-list">
+      <figure class="review">
+        <blockquote>سایز دقیقاً مطابق جدول بود و پارچه‌ی تی‌شرت خیلی نرمه. سفارش دوم رو هم ثبت کردم.</blockquote>
+        <figcaption>سارا ر. <small>تهران</small></figcaption>
+      </figure>
+      <figure class="review">
+        <blockquote>بسته‌بندی تمیز بود و دو روزه رسید. شلوار جین روی من عالی نشست.</blockquote>
+        <figcaption>امیر ک. <small>اصفهان</small></figcaption>
+      </figure>
+      <figure class="review">
+        <blockquote>سایز لباس مجلسی یه کم بزرگ بود؛ تعویضش بدون دردسر انجام شد.</blockquote>
+        <figcaption>مریم ن. <small>شیراز</small></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- خبرنامه -->
+  <section class="newsletter">
+    <h2>از تخفیف‌ها زودتر باخبر شو</h2>
+    <p>ایمیلت رو بذار تا کد تخفیف مدل‌های جدید برات برسه.</p>
+    <form id="newsletter-form" class="newsletter-form">
+      <input type="email" id="news-email" placeholder="ایمیل شما" required>
+      <button type="submit">عضویت در خبرنامه</button>
+    </form>
+  </section>
+
+  <!-- فوتر -->
+  <footer class="footer" id="contact">
+    <div class="social">
+      <a href="#" aria-label="اینستاگرام">اینستاگرام</a>
+      <a href="#" aria-label="تلگرام">تلگرام</a>
+      <a href="#" aria-label="واتساپ">واتساپ</a>
+    </div>
+    <p>تلفن: ۰۲۱-۱۲۳۴۵۶۷۸ | ایمیل: info@styleshop.ir</p>
+    <p>© ۱۴۰۵ تمامی حقوق محفوظ است</p>
+  </footer>
+
+  <!-- پس‌زمینه‌ی تیره -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- پنل سبد خرید -->
+  <aside class="cart-drawer" id="cart-drawer" aria-label="سبد خرید">
+    <div class="drawer-header">
+      <h2>🛍️ سبد خرید شما</h2>
+      <button class="close-btn" data-close aria-label="بستن">✕</button>
+    </div>
+    <div class="drawer-body" id="cart-items"></div>
+    <div class="drawer-footer" id="drawer-footer">
+      <div class="total-row">
+        <span>جمع کل:</span>
+        <strong id="cart-total">۰ تومان</strong>
+      </div>
+      <button class="checkout-btn" id="checkout-open">ادامه و تسویه حساب</button>
+      <button class="clear-btn" id="clear-cart">خالی کردن سبد</button>
+    </div>
+  </aside>
+
+  <!-- پنجره‌ی جزئیات محصول -->
+  <div class="modal product-modal" id="product-modal" role="dialog" aria-modal="true" aria-label="جزئیات محصول">
+    <button class="close-btn dark" data-close aria-label="بستن">✕</button>
+    <div class="pm-image" id="pm-emoji"></div>
+    <div class="pm-info">
+      <h3 id="pm-name"></h3>
+      <p class="pm-price" id="pm-price"></p>
+      <p class="pm-desc" id="pm-desc"></p>
+
+      <div class="option-group">
+        <div class="option-title">سایز</div>
+        <div class="chips" id="pm-sizes"></div>
+      </div>
+
+      <div class="option-group">
+        <div class="option-title">رنگ: <strong id="pm-color-name"></strong></div>
+        <div class="chips" id="pm-colors"></div>
+      </div>
+
+      <button class="checkout-btn" id="pm-add">افزودن به سبد خرید</button>
+    </div>
+  </div>
+
+  <!-- پنجره‌ی تسویه حساب -->
+  <div class="modal checkout-modal" id="checkout-modal" role="dialog" aria-modal="true" aria-label="تسویه حساب">
+    <button class="close-btn dark" data-close aria-label="بستن">✕</button>
+
+    <div id="co-form-wrap">
+      <h3>اطلاعات ارسال</h3>
+      <div class="co-summary" id="co-summary"></div>
+
+      <form id="checkout-form" novalidate>
+        <label>نام و نام خانوادگی
+          <input type="text" name="name" autocomplete="name">
+          <small class="err"></small>
+        </label>
+        <label>شماره موبایل
+          <input type="tel" name="phone" placeholder="۰۹۱۲۳۴۵۶۷۸۹" autocomplete="tel" inputmode="numeric">
+          <small class="err"></small>
+        </label>
+        <label>شهر
+          <input type="text" name="city">
+          <small class="err"></small>
+        </label>
+        <label>آدرس کامل
+          <textarea name="address" rows="3"></textarea>
+          <small class="err"></small>
+        </label>
+        <button type="submit" class="checkout-btn">ثبت سفارش</button>
+        <p class="note">پرداخت آنلاین در این نسخه فعال نیست؛ سفارش فقط برای نمایش ثبت می‌شود.</p>
+      </form>
+    </div>
+
+    <div class="co-success" id="co-success" hidden>
+      <div class="big">🎉</div>
+      <h3>سفارش شما ثبت شد</h3>
+      <p>کد پیگیری: <strong id="co-code"></strong></p>
+      <p>به‌زودی با شما تماس می‌گیریم.</p>
+      <button class="checkout-btn" data-close>بازگشت به فروشگاه</button>
+    </div>
+  </div>
+
+  <!-- پیام کوچک -->
+  <div class="toast-wrap" id="toast-wrap" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
