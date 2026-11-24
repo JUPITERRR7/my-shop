@@ -727,7 +727,22 @@ nav a:hover::after { width: 100%; }
 /* حس لمس دکمه‌ها */
 .product-card:active { transform: scale(0.97); }
 .btn:active, .checkout-btn:active, .btn-ghost:active { transform: scale(0.97); }
-.header-search { display: none; }
+  .header-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-inline-start: auto;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #e63946, #ff8a5c);
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(230, 57, 70, 0.35);
+    transition: transform 0.2s ease;
+  }
 
 /* ===== موبایل ===== */
 @media (max-width: 720px) {
